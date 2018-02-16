@@ -16,11 +16,8 @@ Loan.prototype.monthlyPayment = function() {
   return payment;
 }
 
-Loan.prototype.monthlyInterest = function(currentAmount) {
-  // this method uses the currentAmount to calculate interest, which may be different from the loan object's amount
-  // Add your code here
+// Add a prototype method called 'monthlyInterest' onto the Loan class
+// Instead of using the loan amount in the function, pass in a local variable 'currentAmount'
 
-  return interest;
-}
 
 module.exports = Loan;
