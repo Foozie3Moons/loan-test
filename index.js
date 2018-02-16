@@ -12,18 +12,14 @@ function Loan(args) {
 Loan.prototype.monthlyPayment = function() {
   // You can use `this.amount` or `this.apr` to get values for the current class object
   // Add your code here
-  var monthlyRate = this.apr / 12;
-  var totalPayments = this.length * 12;
-  var monthlyPayment = (monthlyRate / (1 - Math.pow((1 + monthlyRate), -totalPayments)) * this.amount);
-  var payment = Math.round(monthlyPayment * 100) / 100;
 
   return payment;
 }
 
 Loan.prototype.monthlyInterest = function(currentAmount) {
+  // this method uses the currentAmount to calculate interest, which may be different from the loan object's amount
   // Add your code here
-  var interest = currentAmount * this.apr / 12;
-  interest = Math.round(interest * 100) / 100;
+
   return interest;
 }
 

@@ -16,45 +16,61 @@ describe('Monthly Payment', function() {
     var payment = loan.monthlyPayment();
     // all these tests below are equivalent
     // TDD
-    assert.strictEqual(86.07, payment);
+    assert.strictEqual(payment, 86.07);
     // BDD
     expect(payment).to.equal(86.07);
     payment.should.equal(86.07);
   });
 
-  it('should return 123.37 when given 4.5% APR, 10 year term, and 12000 balance', function() {
+  it.skip('should return 123.37 when given 4.5% APR, 10 year term, and 12000 balance', function() {
     var loan = new Loan({
       apr: 0.045,
       length: 10,
       amount: 12000
     });
     var payment = loan.monthlyPayment();
-    assert.strictEqual(124.37, payment);
+    assert.strictEqual(payment, 124.37);
   });
 
-  it('should return 93.22 when given 4.5% APR, 5 year loan, and 5000 balance', function() {
+  it.skip('should return 93.22 when given 4.5% APR, 5 year loan, and 5000 balance', function() {
     var loan = new Loan({
       apr: 0.045,
       length: 5,
       amount: 5000
     });
     var payment = loan.monthlyPayment();
-    assert.strictEqual(93.22, payment);
+    assert.strictEqual(payment, 93.22);
   });
+
+  it.skip('should return 987.80 when given 2.5% APR, 30 year loan, and 250000 balance', function() {
+    var loan = new Loan({
+      apr: 0.025,
+      length: 30,
+      amount: 250000
+    });
+    var payment = loan.monthlyPayment();
+    assert.strictEqual(payment, 987.80);
+  })
 
 });
 
 describe('Monthly Interest', function() {
 
-  it('should return 20.63 when given a 4.5% APR, 5 year loan, and 5000 balance', function() {
+  it.skip('should return 20.63 when given a 4.5% APR and 5500 current balance', function() {
     var loan = new Loan({
       apr: 0.045,
-      length: 5,
-      amount: 7000
     });
     var interest = loan.monthlyInterest(5500);
-    assert.strictEqual(20.63, interest);
+    assert.strictEqual(interest, 20.63);
     console.log(interest);
   });
+
+  it.skip('should return 507.03 when given a 2.5% APR and 243373 current balance', function() {
+    var loan = new Loan({
+      apr: 0.025
+    });
+    var interest = loan.monthlyInterest(243373);
+    assert.strictEqual(interest, 507.03);
+  })
 
 });
