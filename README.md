@@ -6,9 +6,7 @@ You're tasked with writing some code that can accurately calculate monthly payme
 
 1. Get the monthly interest rate (rate is annual by default)
 2. Get the total monthly payments (length is yearl by default)
-3. You're given this formula for calculating payment:
-
-  `p = r * la / (1 - (1 + r) ^ -n)`
+3. You're given this formula for calculating payment: `p = r * la / (1 - (1 + r) ^ -n)`
   - p = payment
   - la = loan amount
   - r = monthly rate
