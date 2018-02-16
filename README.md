@@ -7,11 +7,12 @@ You're tasked with writing some code that can accurately calculate monthly payme
 1. Get the monthly interest rate (rate is annual by default)
 2. Get the total monthly payments (length is yearl by default)
 3. You're given this formula for calculating payment:
+
 `p = r * la / (1 - (1 + r) ^ -n)`
-- p = payment
-- la = loan amount
-- r = monthly rate
-- n = total payments
+  - p = payment
+  - la = loan amount
+  - r = monthly rate
+  - n = total payments
 4. When multiplying your loan amount by a percentage, you get a float. Banks usually round to the nearest hundredth. How will we account for this?
 
 ### Monthly Interest
