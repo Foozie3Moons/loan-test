@@ -50,7 +50,7 @@ describe('Monthly Payment', function() {
     });
     var payment = loan.monthlyPayment();
     assert.strictEqual(payment, 987.80);
-  })
+  });
 
 });
 
@@ -71,6 +71,6 @@ describe('Monthly Interest', function() {
     });
     var interest = loan.monthlyInterest(243373);
     assert.strictEqual(interest, 507.03);
-  })
+  });
 
 });
