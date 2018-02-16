@@ -29,7 +29,7 @@ describe('Monthly Payment', function() {
       amount: 12000
     });
     var payment = loan.monthlyPayment();
-    assert.strictEqual(payment, 124.37);
+    expect(payment).to.equal(124.37);
   });
 
   it.skip('should return 93.22 when given 4.5% APR, 5 year loan, and 5000 balance', function() {
@@ -39,7 +39,7 @@ describe('Monthly Payment', function() {
       amount: 5000
     });
     var payment = loan.monthlyPayment();
-    assert.strictEqual(payment, 93.22);
+    expect(payment).to.equal(93.22);
   });
 
   it.skip('should return 987.80 when given 2.5% APR, 30 year loan, and 250000 balance', function() {
@@ -49,7 +49,7 @@ describe('Monthly Payment', function() {
       amount: 250000
     });
     var payment = loan.monthlyPayment();
-    assert.strictEqual(payment, 987.80);
+    expect(payment).to.equal(987.80);
   });
 
 });
@@ -59,18 +59,21 @@ describe('Monthly Interest', function() {
   it('should return 18.75 when given a 4.5% APR and 5500 current balance', function() {
     var loan = new Loan({
       apr: 0.045,
+      length: 5,
+      amount: 10000
     });
     var interest = loan.monthlyInterest(5000);
-    assert.strictEqual(interest, 18.75);
-    console.log(interest);
+    expect(interest).to.equal(18.75);
   });
 
   it.skip('should return 507.03 when given a 2.5% APR and 243373 current balance', function() {
     var loan = new Loan({
-      apr: 0.025
+      apr: 0.025,
+      length: 30,
+      amount: 250000
     });
     var interest = loan.monthlyInterest(243373);
-    assert.strictEqual(interest, 507.03);
+    expect(interest).to.equal(507.03);
   });
 
 });
