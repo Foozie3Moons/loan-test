@@ -18,8 +18,6 @@ You're tasked with writing some code that can accurately calculate monthly payme
 1. All you need to do for this one is think of
 2. You will be multiplying a dollar amount by a percentage, like in Monthly Payment. You will need to round your number the same way.
 
-### Monthly Principle
-
 ## Instructions
 
 You have a test suite with tests that you need to make pass. They are all disabled except the first one right now. To enable a test, remove the `.skip` off the it() function. Enable one test at a time and make it pass before enabling the next.
